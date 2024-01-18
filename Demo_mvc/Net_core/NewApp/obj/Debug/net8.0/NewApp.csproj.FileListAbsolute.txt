@@ -1,0 +1,15 @@
+D:\BT_PTPMQL\Demo_mvc\Net_core\NewApp\bin\Debug\net8.0\NewApp.exe
+D:\BT_PTPMQL\Demo_mvc\Net_core\NewApp\bin\Debug\net8.0\NewApp.deps.json
+D:\BT_PTPMQL\Demo_mvc\Net_core\NewApp\bin\Debug\net8.0\NewApp.runtimeconfig.json
+D:\BT_PTPMQL\Demo_mvc\Net_core\NewApp\bin\Debug\net8.0\NewApp.dll
+D:\BT_PTPMQL\Demo_mvc\Net_core\NewApp\bin\Debug\net8.0\NewApp.pdb
+D:\BT_PTPMQL\Demo_mvc\Net_core\NewApp\obj\Debug\net8.0\NewApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\BT_PTPMQL\Demo_mvc\Net_core\NewApp\obj\Debug\net8.0\NewApp.AssemblyInfoInputs.cache
+D:\BT_PTPMQL\Demo_mvc\Net_core\NewApp\obj\Debug\net8.0\NewApp.AssemblyInfo.cs
+D:\BT_PTPMQL\Demo_mvc\Net_core\NewApp\obj\Debug\net8.0\NewApp.csproj.CoreCompileInputs.cache
+D:\BT_PTPMQL\Demo_mvc\Net_core\NewApp\obj\Debug\net8.0\NewApp.sourcelink.json
+D:\BT_PTPMQL\Demo_mvc\Net_core\NewApp\obj\Debug\net8.0\NewApp.dll
+D:\BT_PTPMQL\Demo_mvc\Net_core\NewApp\obj\Debug\net8.0\refint\NewApp.dll
+D:\BT_PTPMQL\Demo_mvc\Net_core\NewApp\obj\Debug\net8.0\NewApp.pdb
+D:\BT_PTPMQL\Demo_mvc\Net_core\NewApp\obj\Debug\net8.0\NewApp.genruntimeconfig.cache
+D:\BT_PTPMQL\Demo_mvc\Net_core\NewApp\obj\Debug\net8.0\ref\NewApp.dll
