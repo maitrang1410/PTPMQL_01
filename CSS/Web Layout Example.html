@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: white;
+}
+
+.header, .footer {
+  background-color: grey;
+  color: white;
+  padding: 15px;
+}
+
+.column {
+  float: left;
+  padding: 15px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.menu {
+  width: 25%;
+}
+
+.content {
+  width: 75%;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 8px;
+  background-color: #33b5e5;
+  color: #ffffff;
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>mai thị thu trang</h1>
+</div>
+
+<div class="clearfix">
+  <div class="column menu">
+    <ul><!--chứa đụng thông tin-->
+      <li>khoa</li>
+      <li>lớp</li>
+      <li>MSV</li>
+ 
+    </ul>
+  </div>
+
+  <div class="column content">
+    <h1>mai thị thu trang</h1>
+    <h2> chứa những thông tin chung</h2>
+    <p>khoa công nghệ thông tin tin kinh tế 65a 201506516051</p>
+    <p>You will learn more about web layout and responsive web pages in a later chapter.</p>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Footer Text</p>
+  <p> chứ đụng những thông tin liên hệ >
+  <p> địa chỉ </p>
+</div>
+
+</body>
+</html>
+

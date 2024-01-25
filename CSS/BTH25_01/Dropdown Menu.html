@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+</style>
+</head>
+<body>
+
+<h2>Dropdown Menu</h2>
+<p>Move the mouse over the button to open the dropdown menu.</p>
+
+<div class="dropdown">
+  <button class="dropbtn">mai thị thu trang</button>
+  <div class="dropdown-content">
+  <a href="#">2021050651</a>
+  <a href="#">091764824</a>
+  <a href="#">k65 3</a>
+  </div>
+</div>
+
+<p><strong>Note:</strong> We use href="#" for test links. In a real web site this would be URLs.</p>
+
+<p> HTML Sử dụng bất kỳ phần tử nào để mở nội dung thả xuống, ví dụ: phần tử span hoặc button.
+
+Sử dụng phần tử vùng chứa (như div) để tạo nội dung thả xuống và thêm bất kỳ nội dung nào bạn muốn vào bên trong nội dung đó.
+
+Bao bọc phần tử div xung quanh các phần tử để định vị chính xác nội dung thả xuống bằng CSS.
+
+CSS Lớp này .dropdownsử dụng position:relative, điều này cần thiết khi chúng ta muốn nội dung thả xuống được đặt ngay bên dưới nút thả xuống (sử dụng position:absolute).
+
+Lớp .dropdown-contentgiữ nội dung thả xuống thực tế. Nó được ẩn theo mặc định và sẽ được hiển thị khi di chuột (xem bên dưới). Lưu ý min-widthđược đặt thành 160px. Hãy thoải mái thay đổi điều này. Mẹo: Nếu bạn muốn chiều rộng của nội dung thả xuống bằng nút thả xuống, hãy đặt widththành 100% (và overflow:autođể bật cuộn trên màn hình nhỏ).
+
+Thay vì sử dụng đường viền, chúng tôi đã sử dụng box-shadowthuộc tính CSS để làm cho menu thả xuống trông giống như một "thiệp".
+
+Bộ :hoverchọn được sử dụng để hiển thị menu thả xuống khi người dùng di chuyển chuột qua nút thả xuống.
+
+</p>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p::first-line {
+  color: #ff0000;
+  font-variant: small-caps;
+}
+p::first-letter { /*phan ftuwr giả chữ cái đầu tiên*/
+  color: #ff0000;
+  font-size: xx-large;
+}
+h1::before {
+  content: url(https://i.etsystatic.com/42991745/r/il/74e137/4986387829/il_1588xN.4986387829_in5j.jpg)
+  
+}
+h1::after {
+  content: url(https://i.etsystatic.com/42991745/r/il/74e137/4986387829/il_1588xN.4986387829_in5j.jpg);
+}
+::marker { 
+  color: red;
+  font-size: 23px;
+}
+::selection {
+  color: red;
+  background: yellow;
+}
+</style>
+</head>
+<body>
+<p>mai thị thu trang_2021050651</p>
+<p>Bạn có thể sử dụng phần tử giả ::first-line để thêm hiệu ứng đặc biệt vào dòng đầu tiên của văn bản. Một số văn bản khác. Và thậm chí nhiều hơn, và nhiều hơn nữa, và nhiều hơn nữa, và nhiều hơn nữa, và nhiều hơn nữa, và nhiều hơn nữa, và nhiều hơn nữa, và nhiều hơn nữa, và nhiều hơn nữa.</p>
+<p>Phần ::first-linetử giả chỉ có thể được áp dụng cho các phần tử cấp khối.Lưu ý ký hiệu dấu hai chấm - ::first-line</p>
+p>You can use the ::first-letter pseudo-element to add a special effect to the first character of a text!</p>
+<h1>:: trước, sau phần tử giả</h1>
+<p>Phần ::beforetử giả có thể được sử dụng để chèn một số nội dung trước nội dung của một phần tử.
+::aftertử giả có thể được sử dụng để chèn một số nội dung sau nội dung của một phần tử.</p>
+<h2>Phần tử giả ::marker</h2>
+<p>Phần ::markertử giả chọn các điểm đánh dấu của các mục danh sách</p>
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+<ol>
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
+</ol>
+<h2>CSS - Phần tử giả ::selection</h2>
+<p>
+Phần ::selectiontử giả khớp với phần của phần tử được người dùng chọn.
+
+Các thuộc tính CSS sau đây có thể được áp dụng cho ::selection: color, background, cursorvà outline.
+</p>
+</body>
+</html>
+

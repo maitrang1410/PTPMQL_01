@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+input {
+  width: 100%;
+}
+.a input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+.b input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid red;
+  border-radius: 4px;
+}
+.c input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid red;
+}
+.d input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: #3CBC8D;
+  color: white;
+}
+.d input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: #3CBC8D;
+  color: white;
+}
+.e input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #555;
+  outline: none;
+}
+.f input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+.f input[type=text]:focus {
+  border: 3px solid #555;
+}
+.A input[type=text] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+.B input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  transition: width 0.4s ease-in-out;
+}
+
+.B input[type=text]:focus {
+  width: 100%;
+}
+.C textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+D select {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+.E input[type=button], input[type=submit], input[type=reset] {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<h2>nhập kiểu dáng </h2>
+<p> input type=text- sẽ chỉ chọn các trường văn bản</p>
+<p>input type=password - sẽ chỉ chọn các trường mật khẩu</p>
+<p>input type=number - sẽ chỉ chọn trường số</p>
+<form>
+  <label for="fname">First Name</label>
+  <input type="text" id="fname" name="fname">
+</form>
+
+<div class=" a">
+<h2>đầu vào cs đệm </h2>
+<p>paddingthuộc tính để thêm khoảng trắng bên trong trường văn bản</p>
+<p>Khi bạn có nhiều đầu vào nối tiếp nhau, bạn cũng có thể muốn thêm một số đầu vào marginđể thêm khoảng trống bên ngoài chúng: box-sizingtính thành border-box. Điều này đảm bảo rằng phần đệm và đường viền cuối cùng được bao gồm trong tổng chiều rộng và chiều cao của các phần tử.</p>
+<form>
+  <label for="fname">First Name</label>
+  <input type="text" id="fname" name="fname">
+  <label for="lname">Last Name</label>
+  <input type="text" id="lname" name="lname">
+</form>
+</div>
+<div class="b">
+<h2>đầu vào là viền </h2>
+<p>borderthuộc tính để thay đổi kích thước và màu đường viền, đồng thời sử dụng border-radiusthuộc tính để thêm các góc tròn:</p>
+<form>
+  <label for="fname">First Name</label>
+  <input type="text" id="fname" name="fname">
+  <label for="lname">Last Name</label>
+  <input type="text" id="lname" name="lname">
+</form>
+</div>
+<div class="c">
+<h2>Input fields with bottom border</h2>
+<p>Nếu bạn chỉ muốn có đường viền dưới cùng, hãy sử dụng border-bottomthuộc tính</p>
+<form>
+  <label for="fname">First Name</label>
+  <input type="text" id="fname" name="fname">
+  <label for="lname">Last Name</label>
+  <input type="text" id="lname" name="lname">
+</form>
+</div>
+<div class="d">
+<h2>Input fields with color</h2>
+
+<form>
+  <label for="fname">First Name</label>
+  <input type="text" id="fname" name="fname" value="John">
+  <label for="lname">Last Name</label>
+  <input type="text" id="lname" name="lname" value="Doe">
+</form>
+</div>
+<div class="e">
+<h2>Input fields with color on :focus</h2>
+
+<p>Here, the input field gets a color when it gets focus (clicked on):</p>
+
+<form>
+  <label for="fname">First Name</label>
+  <input type="text" id="fname" name="fname" value="John">
+  <label for="lname">Last Name</label>
+  <input type="text" id="lname" name="lname" value="Doe">
+</form>
+<div>
+<div class="f">
+<h2>Input fields with black border on :focus</h2>
+
+<p>Here, the input field gets a black border color when it gets focus (clicked on). We have also added the CSS transition property to animate the border color (takes 0.5 seconds to change the color on focus):</p>
+
+<form>
+  <label for="fname">First Name</label>
+  <input type="text" id="fname" name="fname" value="John">
+  <label for="lname">Last Name</label>
+  <input type="text" id="lname" name="lname" value="Doe">
+</form>
+</div>
+<div class="A">
+<h2>Input field with an icon inside</h2>
+<form>
+  <input type="text" name="search" placeholder="Search..">
+</form>
+</div>
+<div class="B">
+<h2>Animate width of search input</h2>
+<form>
+  <input type="text" name="search" placeholder="Search..">
+</form>
+</div>
+<div class="C">
+<h2>Styling textarea</h2>
+
+<p><strong>Tip:</strong> Use the resize property to prevent textareas from being resized (disable the "grabber" in the bottom right corner):</p>
+<form>
+  <textarea>Some text...</textarea>
+</form>
+</div>
+<div class="D">
+<h2>Styling a select menu</h2>
+<form>
+  <select id="country" name="country">
+  <option value="au">việt nam</option>
+  <option value="ca">hàn </option>
+  <option value="usa">USA</option>
+  </select>
+</form>
+</div>
+<div class="E">
+<h2>Styling form buttons</h2>
+<input type="button" value="Button">
+<input type="reset" value="Reset">
+<input type="submit" value="Submit">
+</div>
+</body>
+</html>
+
+

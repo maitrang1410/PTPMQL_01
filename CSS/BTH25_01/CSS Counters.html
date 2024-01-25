@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  counter-reset: section;
+}
+
+h2::before {
+  counter-increment: section;
+  content: "Section " counter(section) ": ";
+}
+A.h1 {
+  counter-reset: subsection;
+}
+
+.A h1::before {
+  counter-increment: section;
+  content: "Section " counter(section) ". ";
+}
+
+.A h2::before {
+  counter-increment: subsection;
+  content: counter(section) "." counter(subsection) " ";
+}
+.table ol {
+  counter-reset: section;
+  list-style-type: none;
+}
+
+.table li::before {
+  counter-increment: section;
+  content: counters(section,".") " ";
+}
+</style>
+</head>
+<body>
+
+<h1>MAi thị thu trang</h1>
+
+<h2>Mai thị thu trang</h2>
+<h2>202105651</h2>
+<h2>công nghệ thông tin </h2>
+<h2>Python Tutorial</h2>
+<h2>SQL Tutorial</h2>
+<div class="A">
+<h1>mai thị thu trang</h1>
+<h2>2021050651</h2>
+<h2>CNTT</h2>
+<h2>k65</h2>
+
+<h1>Scripting Tutorials</h1>
+<h2>JavaScript</h2>
+<h2>jQuery</h2>
+<h2>React</h2>
+</div>
+<div class="table">
+<ol>
+  <li>item</li>
+  <li>item   
+  <ol>
+    <li>item</li>
+    <li>item</li>
+    <li>item
+    <ol>
+      <li>item</li>
+      <li>item</li>
+      <li>item</li>
+    </ol>
+    </li>
+    <li>item</li>
+  </ol>
+  </li>
+  <li>item</li>
+  <li>item</li>
+</ol>
+</div>
+</body>
+</html>
+

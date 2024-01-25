@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.center {
+  line-height: 200px;
+  height: 200px;
+  border: 3px solid green;
+  text-align: center;
+}
+
+.center p {
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+}
+.center_a{ 
+  height: 200px;
+  position: relative;
+  border: 3px solid green; 
+}
+
+.center_a p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.center_flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  border: 3px solid green; 
+}
+</style>
+</head>
+<body>
+
+<h2>Căn giữa theo chiều dọc - Sử dụng chiều cao dòng</h2>
+
+<p> sử dụng line-heightthuộc tính có giá trị bằng thuộc heighttí</p>
+
+<div class="center_a">
+  
+  <p> mai thị thu trang _2021050651</p>
+</div>
+<h2>Center with position and transform</h2>
+<div class="center_a">
+  <p> mai thị thu trang _2021050651</p>
+
+</div>
+<h2>Flexbox Centering</h2>
+
+<p>A container with both the justify-content and the align-items properties set to <em>center</em> will align the item(s) in the center (in both axis).</p>
+
+<div class="center_flex">
+    <p> mai thị thu trang _2021050651</p>
+
+</div>
+</body>
+</html>
+
+

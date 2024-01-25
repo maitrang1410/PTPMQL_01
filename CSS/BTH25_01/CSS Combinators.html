@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.child div > p {
+  background-color: yellow;
+}
+.Adjacen div + p {
+  background-color: yellow;
+}
+.General  div ~ p {
+  background-color: yellow;
+}
+</style>
+</head>
+<body>
+<div class="child">
+<h2>Child Selector</h2>
+
+<p>The child selector (>) selects all elements that are the children of a specified element.</p>
+
+<div>
+  <p>mai thị thu trang.</p>
+  <p>2021050651</p>
+  <section>
+    <!-- not Child but Descendant -->
+    <p>khoa công nghệ thông tin </p>
+  </section>
+  <p>thông tin chung .</p>
+</div>
+
+<p>Paragraph 5. Not in a div.</p>
+<p>Paragraph 6. Not in a div.</p>
+</div>
+<div class="Adjacen">
+<h2>Child Selector</h2>
+
+<p>The child selector (>) selects all elements that are the children of a specified element.</p>
+
+<div>
+  <p>mai thị thu trang.</p>
+  <p>2021050651</p>
+  <section>
+    <!-- not Child but Descendant -->
+    <p>khoa công nghệ thông tin </p>
+  </section>
+  <p>thông tin chung .</p>
+</div>
+
+<p>Paragraph 5. Not in a div.</p>
+<p>Paragraph 6. Not in a div.</p>
+</div>
+<div class="General ">
+<h2>Child Selector</h2>
+
+<p>The child selector (>) selects all elements that are the children of a specified element.</p>
+
+<div>
+  <p>mai thị thu trang.</p>
+  <p>2021050651</p>
+  <section>
+    <!-- not Child but Descendant -->
+    <p>khoa công nghệ thông tin </p>
+  </section>
+  <p>thông tin chung .</p>
+</div>
+
+<p>Paragraph 5. Not in a div.</p>
+<p>Paragraph 6. Not in a div.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+li {
+  display: inline;
+}
+span {
+  display: block;
+}
+.block elements a {
+  display: block;
+}
+ .none h1.hidden {
+  display: none;
+}
+.visibi h1.hidden {
+  visibility: hidden;
+}
+</style>
+</head>
+<body>
+
+<p>Display a list of links as a horizontal menu:</p>
+
+<ul>
+  <li><a href="/html/default.asp" target="_blank">HTML</a></li>
+  <li><a href="/css/default.asp" target="_blank">CSS</a></li>
+  <li><a href="/js/default.asp" target="_blank">JavaScript</a></li>
+</ul>
+<div class=" block">
+<h1>Display span elements as block elements</h1>
+
+<span>A display property with</span> <span>a value of "block" results in</span> <span>a line break between each span elements.</span>
+</div>
+<div class=" block elements">
+<h1>hiện thị theo khối dọc</h1>
+
+<a href="/html/default.asp" target="_blank">HTML</a>
+<a href="/css/default.asp" target="_blank">CSS</a>
+<a href="/js/default.asp" target="_blank">JavaScript</a>
+</div>
+<div class=" none">
+<h1>This is a visible heading</h1>
+<h1 class="hidden">This is a hidden heading</h1>
+<p>Notice that the h1 element with display: none; does not take up any space.</p>
+</div><div class ="visibi">
+<h1>This is a visible heading</h1>
+<h1 class="hidden">This is a hidden heading</h1>
+<p>Notice that the hidden heading still takes up space.</p>
+</div>
+</body>
+</html>
+
+

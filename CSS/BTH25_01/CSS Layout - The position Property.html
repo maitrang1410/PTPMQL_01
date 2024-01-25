@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  background-color: #cae8ca;
+  border: 2px solid #4CAF50;
+}
+div.static {
+  position: static;
+  border: 3px solid #73AD21;
+}
+div.relative {
+  position: relative;
+  left: 30px;
+  border: 3px solid #73AD21;
+}
+div.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  border: 3px solid #73AD21;
+}
+div.absolute {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 200px;
+  height: 100px;
+  border: 3px solid #73AD21;
+}
+</style>
+</head>
+<body>
+
+<div class="sticky">mai thị thu trang </div>
+<p>Try to <b>scroll</b> position: sticky;được định vị dựa trên vị trí cuộn của người dùn.</p>
+  <p>In this example, the sticky element sticks to the top of the page (top: 0), when you reach its scroll position.</p>
+  <p>Scroll back up to remove the stickyness.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+</div>
+<br>
+<br>
+<br>
+
+<br>
+<div class="static">
+<h2>position: static;</h2>
+
+<p>Một phần tử position: static;không được định vị theo bất kỳ cách đặc biệt nào; nó luôn được định vị theo luồng thông thường của trang</p>
+
+
+<h2>Mai thị thu trang . This div element has position: static;<h1>
+</div>
+<div class="relative">
+<h2>position: relative;</h2>
+
+<p>An element with position: relative; được định vị so với vị trí bình thường của nó.:</p>
+
+
+<p>Mai thị thu trang This div element has position: relative;</p>
+</div>
+<div class="fixed">
+<h2>position: fixed;</h2>
+
+<p>An element with position: fixed; được định vị tương ứng với khung nhìn, có nghĩa là nó luôn ở cùng một vị trí ngay cả khi trang được cuộn. Các thuộc tính trên, phải, dưới và trái được sử dụng để định vị phần tử.</p>
+
+ mai thị thu trang This div element has position: fixed;
+</div>
+<div class=" absolute">
+<h2>position: absolute;</h2>
+
+<p>position: absolute;được định vị tương đối so với tổ tiên được định vị gần nhất (thay vì được định vị tương đối với khung nhìn, như cố định):
+Tuy nhiên; nếu một phần tử được định vị tuyệt đối không có tổ tiên được định vị, nó sẽ sử dụng nội dung tài liệu và di chuyển cùng với việc cuộn trang.</p>
+<div class="absolute">This div element has position: absolute;</div>
+</div>
+<div style="padding-bottom:2000px">
+
+
+</body>
+</html>
+
+

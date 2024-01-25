@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
+
+<h2>Responsive Image Gallery</h2>
+
+<h4>Resize the browser window to see the effect.</h4>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="https://i1-dulich.vnecdn.net/2019/10/15/cuc-quang-vnexpress-4-1571122044.jpg?w=0&h=0&q=100&dpr=2&fit=crop&s=8ACp__3-au80CV1vwBjH_w">
+      <img src="https://i1-dulich.vnecdn.net/2019/10/15/cuc-quang-vnexpress-4-1571122044.jpg?w=0&h=0&q=100&dpr=2&fit=crop&s=8ACp__3-au80CV1vwBjH_w" alt="Cinque Terre" width="600" height="400">
+    </a>
+    <div class="desc">2021050651_cực quang</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="https://i1-dulich.vnecdn.net/2019/10/15/DSC-3113.jpg?w=1200&h=0&q=100&dpr=2&fit=crop&s=jy4a1rMNSQlFlr2nXSuJSg">
+      <img src="https://i1-dulich.vnecdn.net/2019/10/15/DSC-3113.jpg?w=1200&h=0&q=100&dpr=2&fit=crop&s=jy4a1rMNSQlFlr2nXSuJSg" alt="Forest" width="600" height="400">
+    </a>
+    <div class="desc">2021050651_cực quang</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="https://i1-dulich.vnecdn.net/2019/10/15/cuc-quang-vnexpress-2.jpg?w=1200&h=0&q=100&dpr=2&fit=crop&s=RL4DdUj-Fx2nUJ11TcYHXQ">
+      <img src="https://i1-dulich.vnecdn.net/2019/10/15/cuc-quang-vnexpress-2.jpg?w=1200&h=0&q=100&dpr=2&fit=crop&s=RL4DdUj-Fx2nUJ11TcYHXQ" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">2021050651_cực quang</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="https://i1-dulich.vnecdn.net/2019/10/15/cuc-quang-vnexpress-1-1571122043.jpg?w=1200&h=0&q=100&dpr=2&fit=crop&s=CmfVlFdCbwcY20i2fWhvDg">
+      <img src="https://i1-dulich.vnecdn.net/2019/10/15/cuc-quang-vnexpress-1-1571122043.jpg?w=1200&h=0&q=100&dpr=2&fit=crop&s=CmfVlFdCbwcY20i2fWhvDg" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">2021050651_cực quang</div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div style="padding:6px;">
+  <p>Ví dụ này sử dụng truy vấn phương tiện để sắp xếp lại hình ảnh trên các kích thước màn hình khác nhau: đối với màn hình rộng hơn 700px, nó sẽ hiển thị bốn hình ảnh cạnh nhau, đối với màn hình nhỏ hơn 700px, nó sẽ hiển thị hai hình ảnh cạnh nhau. Đối với màn hình nhỏ hơn 500px, hình ảnh sẽ xếp chồng lên nhau theo chiều dọc (100%)..</p>
+  <p>
+  mai thị thi trang_2021050651</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>mai thị thu trang</title>
+<style>
+.attreibute a[target] {
+  background-color: yellow;
+}
+.value a[target="_blank"] {
+  background-color: yellow;
+}
+.a [title~="flower"] {
+  border: 5px solid yellow;
+}
+[class|="top"] {
+  background: yellow;
+}
+.b [class^="top"] {
+  background: yellow;
+}
+.c [class$="test"] {
+  background: yellow;
+}
+.d [class*="te"] {
+  background: yellow;
+}
+
+.e input[type="text"] {
+  width: 150px;
+  display: block;
+  margin-bottom: 10px;
+  background-color: yellow;
+}
+
+.e input[type="button"] {
+  width: 120px;
+  margin-left: 35px;
+  display: block;
+}
+</style>
+</head>
+<body>
+<div class="attreibute">
+<h2>CSS [attribute] Selector</h2>
+<p>Bộ [attribute]chọn được sử dụng để chọn các phần tử có thuộc tính được chỉ định.</p>
+
+<a href="https://www.w3schools.com">w3schools.com</a>
+<a href="http://www.disney.com" target="_blank">disney.com</a>
+<a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+</div>
+<div class=" value">
+<h2>CSS [attribute="value"] Selector</h2>
+<p>The link with target="_blank" gets a yellow background:</p>
+
+<a href="https://www.w3schools.com">w3schools.com</a>
+<a href="http://www.disney.com" target="_blank">disney.com</a>
+<a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+<div class=" A">
+<h2>CSS [attribute~="value"] Selector</h2>
+<p>All images with the title attribute containing the word "flower" get a yellow border.</p>
+
+<img src="https://file.hstatic.net/200000455999/file/y_nghia_hoa_hong_7e35a0e79bfa46efa3a257bf4cd3ae58_grande.png" title="flower" width="150" height="113">
+<img src="https://file.hstatic.net/200000455999/file/y_nghia_hoa_hong_7e35a0e79bfa46efa3a257bf4cd3ae58_grande.png" title="tree" width="224" height="162">
+<img src="https://img.lovepik.com/free_png/32/24/13/51k58PICy2taHTri6aWHB_PIC2018.png_860.png" title="https://file.hstatic.net/200000455999/file/y_nghia_hoa_hong_7e35a0e79bfa46efa3a257bf4cd3ae58_grande.png" width="200" height="358">
+<hr>
+<div>
+<h2>CSS [attribute|="value"] Selector</h2>
+
+<h1 class="top-header">mai thị thu trang</h1>
+<p class="top-text">2021050651</p>
+<p class="topcontent">Are you learning CSS?</p>
+<hr>
+<div class ="b">
+<h2>CSS [attribute^="value"] Selector</h2>
+
+<h1 class="top-header">mai thị thu trang</h1>
+<p class="top-text">2021050651</p>
+<p class="topcontent">Are you learning CSS?</p>
+</div>
+</div>
+</div>
+<hr>
+<div class="c">
+<h2>CSS [attribute$="value"] Selector</h2>
+
+<div class="first_test">mai thị thu trrang .</div>
+<div class="second">khoa công nghệ thông tin.</div>
+<div class="my-test">2021050651.</div>
+<p class="mytest">This is some text in a paragraph.</p>
+</div>
+<hr>
+<div class="d">
+<h2>CSS [attribute*="value"] Selector</h2>
+
+<div class="first_test">The first div element.</div>
+<div class="second">The second div element.</div>
+<div class="my-test">The third div element.</div>
+<p class="mytest">This is some text in a paragraph.</p>
+</div>
+<div class="e">
+<h2>Styling Forms</h2>
+
+<form name="input" action="" method="get">
+  Firstname:<input type="text" name="Name" value="Peter" size="20">
+  Lastname:<input type="text" name="Name" value="Griffin" size="20">
+  <input type="button" value="Example Button">
+</form>
+</div>
+</body>
+</html>

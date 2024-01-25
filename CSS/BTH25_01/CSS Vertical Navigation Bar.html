@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+li a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<h2>Vertical Navigation Bar</h2>
+
+<ul>
+
+    <li><a class="active" href="#home">Home</a></li><!-- tạo một lớp "hoạt động" với màu nền xanh lục và văn bản màu trắng. Lớp học được thêm vào liên kết "Trang chủ".-->
+
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+<p>display: block;- Hiển thị các liên kết dưới dạng các thành phần khối làm cho toàn bộ khu vực liên kết có thể nhấp vào được (không chỉ văn bản) và nó cho phép chúng ta chỉ định chiều rộng (và phần đệm, lề, chiều cao, v.v. nếu bạn muốn)
+width: 60px;- Các phần tử khối chiếm toàn bộ chiều rộng có sẵn theo mặc định. Chúng tôi muốn chỉ định chiều rộng 60 pixel</p>
+</body>
+</html>
+
+

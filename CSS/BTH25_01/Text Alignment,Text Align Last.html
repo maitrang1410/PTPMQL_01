@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: left;
+}
+
+h3 {
+  text-align: right;
+}
+/*justify :mỗi dòng có chiều rộng bằng nhau và lề trái và phải đều thẳng*/
+div {
+  border: 1px solid black;
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+  text-align: justify;
+}
+/*Điều chỉnh căn dòng cuối cùng của đoạn văn */
+p.a {
+  text-align-last: right;
+}
+
+p.b {
+  text-align-last: center;
+}
+
+p.c {
+  text-align-last: justify;
+}
+/* dùng directiong , unicode-bidi : thay đổi hướng vb của `	1 phần tử */
+p.ex1 {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+</style>
+</head>
+<body>
+
+<h1>MAI THỊ THU TRANG (center)</h1>
+<h2>MAI THỊ THU TRANG (left)</h2>
+<h3>MAI THỊ THU TRANG  (right)</h3>
+
+<p>The three headings above are aligned center, left and right.</p>
+<hr> 
+<h2> dùng thuộc tính justify</h2>
+<div>
+mai thị thu trang_mai thị thu trang_ mai thị thu trang ' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.'
+</div>
+<hr>
+<h2>text-align-last: right:</h2>
+<p class="a">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. mai thị thu trang_2021050651_công nghệ thông tin_ phát triển phần mềm quản lý  .</p>
+
+<h2>text-align-last: center:</h2>
+<p class="b">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. mai thị thu trang_2021050651_công nghệ thông tin_ phát triển phần mềm quản lý.</p>
+
+<h2>text-align-last: justify:</h2>
+<p class="c">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit.mai thị thu trang_2021050651_công nghệ thông tin_ phát triển phần mềm quản lý</p>
+<h2> thay đổi hướng vb 1 ptu</h2>
+<hr>
+<p>This is the default text direction.</p>
+<p class="ex1">This is right-to-left text direction.</p>
+</body>
+</html>
