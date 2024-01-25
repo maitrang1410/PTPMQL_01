@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div>
+<h2>HTML Forms </h2>
+<p>Thuộc actiontính xác định hành động sẽ được thực hiện khi biểu mẫu được gửi</p>
+<p> Nếu actionthuộc tính bị bỏ qua, hành động sẽ được đặt thành trang hiện tại.<p>
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+</div>
+<hr>
+<hr>
+<div>
+<h2>kết quả đã gửi sẽ mở trong tab trình duyệt </h2>
+<p>Thuộc targettính chỉ định nơi hiển thị phản hồi nhận được sau khi gửi biểu mẫu<p>
+<p>_selfnghĩa là phản hồi sẽ mở trong cửa sổ hiện tại.</p>
+<form action="/action_page.php" target="_blank">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+</div>
+<div>
+<h2>The method Attribute</h2>
+Dữ liệu biểu mẫu có thể được gửi dưới dạng biến URL với method="get" hoặc dưới dạng giao dịch bài đăng HTTP với method="post",
+<p>Nối dữ liệu biểu mẫu vào URL, theo cặp tên/giá trị
+KHÔNG BAO GIỜ sử dụng GET để gửi dữ liệu nhạy cảm! (dữ liệu biểu mẫu đã gửi sẽ hiển thị trong URL!)
+Độ dài của URL bị giới hạn (2048 ký tự)
+Hữu ích cho việc gửi biểu mẫu khi người dùng muốn đánh dấu kết quả
+GET phù hợp với dữ liệu không an toàn, như chuỗi truy vấn trong Google</p>
+<p>khi dùng GET</p>
+<form action="/action_page.php" target="_blank" method="get">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form>
+</div>
+<hr>
+<hr>
+<div>
+<p>This form will be submitted using the POST method:</p>
+
+<form action="/action_page.php" target="_blank" method="post">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<p>Sau khi bạn gửi, hãy lưu ý rằng, không giống như phương thức GET, các giá trị biểu mẫu KHÔNG hiển thị trên thanh địa chỉ của tab trình duyệt mới.POST không có giới hạn về kích thước và có thể được sử dụng để gửi lượng lớn dữ liệu..</p>
+</div>
+</body>
+</html>
+

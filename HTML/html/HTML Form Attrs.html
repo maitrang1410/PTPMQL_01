@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The input Element</h2>
+Phần input tử có thể được hiển thị theo nhiều cách, tùy thuộc vào type thuộc tính.
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br><br>
+  <input type="submit" value="Submit">
+</form>
+<hr>
+<hr>
+<div>
+<form action="/action_page.php">
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select>
+  <input type="submit">
+</form>
+</div>
+<div>
+<p>The select element defines a drop-down list:</p>
+<form action="/action_page.php">
+  <label for="cars"> chọn tháng</label>
+  <select id="cars" name="cars">
+    <option value="volvo">tháng1 </option>
+    <option value="saab">tháng 2</option>
+    <option value="fiat">tháng 3</option>
+    <option value="audi">tháng 4</option>
+  </select>
+  <input type="submit">
+</form>
+hữu ích cho người dùng trình đọc màn hình vì trình đọc màn hình sẽ đọc to nhãn khi người dùng tập trung vào phần tử đầu vào.
+<label>cũng giúp người dùng gặp khó khăn khi nhấp vào các vùng rất nhỏ (chẳng hạn như nút radio hoặc hộp kiểm) - bởi vì khi người dùng nhấp vào văn bản trong phần label tử, nó sẽ chuyển đổi nút radio/hộp kiểm.
+fortính của <label>thẻ phải bằng idthuộc tính của input phần tử để liên kết chúng lại với nhau.
+</div>
+<hr>
+<hr>
+<div>
+<p>Phần select tử xác định danh sách thả xuống
+Phần option tử xác định một tùy chọn có thể được chọn
+electedthuộc tính vào tùy chọn</p>
+
+<form action="/action_page.php">
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select>
+  <input type="submit">
+</form>
+</div>
+<hr>
+<hr>
+
+
+<div>
+<p>SD phần tử size để chỉ định số lượng hiện thị </p>
+
+<form action="/action_page.php">
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars" size="3">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select><br><br>
+  <input type="submit">
+</form>
+<div>
+<h2>Allow Multiple Selections</h2>
+
+<p>Sử dụng multiplethuộc tính để cho phép người dùng chọn nhiều giá trị</p>
+
+<form action="/action_page.php">
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars" size="4" multiple>
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select><br><br>
+  <input type="submit">
+</form>
+</div>
+<p>Hold down the Ctrl (windows) / Command (Mac) button to select multiple options.</p>
+</div>
+<hr>
+<hr>
+
+<div>
+<h2>Textarea</h2>
+<p>Phần textarea tử xác định trường nhập nhiều dòng (vùng văn bản)</p>
+
+<form action="/action_page.php">
+  <textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+  <br><br>
+  <input type="submit">
+</form>
+</div>
+<div>
+<h2>The button Element</h2>
+
+<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+</div>
+<div>
+<h2>biểu mẫu với Fieldset</h2>
+
+<p>Phần tử bộ trường được sử dụng để nhóm dữ liệu liên quan trong một biểu mẫu và phần tử chú giải xác định chú thích cho phần tử bộ trường..
+Phần fieldset tử được sử dụng để nhóm dữ liệu liên quan trong một biểu mẫu.
+
+Phần legend tử xác định chú thích cho fieldset phần tử.</p>
+<form action="/action_page.php">
+  <fieldset>
+    <legend>Personalia:</legend>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="Submit">
+  </fieldset>
+</form>
+</div>
+<div>
+<h2>The output Element</h2>
+<p>Phần output tử biểu thị kết quả của một phép tính (giống như kết quả được thực hiện bởi một tập lệnh)</p>
+
+<form action="/action_page.php"
+oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+  0
+  <input type="range" id="a" name="a" value="50">
+  100 +
+  <input type="number" id="b" name="b" value="50">
+  =
+  <output name="x" for="a b"></output>
+  <br><br>
+  <input type="submit">
+</form>
+</div>
+<div>
+<h2>The datalist Element</h2>
+<p>Phần tử datalist chỉ định danh sách các tùy chọn được xác định trước cho phần tử đầu vào..</p>
+<p>Phần datalist  tử chỉ định danh sách các tùy chọn được xác định trước cho một input phần tử.
+
+Người dùng sẽ thấy danh sách thả xuống gồm các tùy chọn được xác định trước khi họ nhập dữ liệu.
+
+Thuộc listtính của input phần tử, phải tham chiếu đến idthuộc tính của datalist phần tử.</p>
+<form action="/action_page.php">
+  <input list="browsers" name="browser">
+  <datalist id="browsers">
+    <option value="Edge">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+  <input type="submit">
+</form>
+<div>
+</body>
+</html>
+
