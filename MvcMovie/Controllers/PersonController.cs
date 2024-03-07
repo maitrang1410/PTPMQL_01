@@ -10,3 +10,5 @@ public class PersonController : Controller {
         ViewBag.infoPerson= strOutput;
         return View();
             }
+            }
+            
