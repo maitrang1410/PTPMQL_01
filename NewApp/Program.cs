@@ -1,12 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+
 using System.Threading.Tasks;
 namespace Program{
 public class Program {
     private static void Main(string[]args)
-    class ToanTu{
+    class ToanTusosanh{
     {
         int a,b; 
     system.Console.Write("a=");
@@ -14,31 +11,27 @@ public class Program {
     system.Console.Write("b=");
      b= Convert.ToInt32(Console.ReadLine());
      //in tổng a, b
-int tong = a + b;
-        int hieu = a -b;
-        int tich = a * b;
 
-        Console.WriteLine($"Tong {a} + {b} = {tong}");
-        Console.WriteLine($"Hieu {a} - {b} = {hieu}");
-        Console.WriteLine($"Tich {a} * {b} = {tich}");
-
-        if (b != 0)
+        if (a<b)
         {
-            float thuong = (float)a /b;
-            int du =a % b;
-            Console.WriteLine($"Thuong {a} / {b} = {thuong}");
-            Console.WriteLine($" Phan du {a} % {b} = {du}");
-        }else
-        {
-        Console.WriteLine("Khong thuc hien duoc phep chia va phep lay du");
-    }
+            Console.WriteLine($"{a}<{b}");
+        }else if(a==b){
+        
+            Console.WriteLine($"{a}={b}");
      
 
 
+     }else
+     {
+            Console.WriteLine($"{a}>{b}");
+        
      }
      }
      }
      }
+     }
+     
+     
      
     
 
