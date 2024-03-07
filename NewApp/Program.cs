@@ -1,5 +1,7 @@
-internal class Program {
+namespace Programa{
+public class Program {
     private static void Main(string[]args)
+    class ToanTu{
     {
         int a,b; 
     system.Console.Write("a=");
@@ -30,6 +32,9 @@ int tong = a + b;
 
      }
      }
+     }
+     }
+     
     
 
     
