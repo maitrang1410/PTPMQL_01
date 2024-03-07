@@ -1,8 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace MvcMovie.Models 
-{
+namespace MvcMovie.Models;
+
 public class Daily : Hethongphanphoi
 {
     public string MaDaiLy { get;set;}
@@ -12,7 +12,7 @@ public class Daily : Hethongphanphoi
     public string DienThoai {get;set;}
     public string MaHTPP {get;set;}
         }
-        }
+        
 
     
 
