@@ -1,11 +1,9 @@
-using System.Diagnostics;
+using NewApp.Models;
 public class Program {
     private static void Main(string[]args)
     {
-    int a=1;
-    do{
-    system.Cosole.WriteLine(" vòng lặp thứ {0}",a);
-    }while(a<10);
+    Person ps1= new Person();
+    Person ps2= new Person();
     
  }
  }
