@@ -4,8 +4,5 @@ public class PersonController : Controller {
         return View();
         }
    
-    public string Welcome(){
-        return " Welcome đến với PersonController"
-
-            }
+    
             }
