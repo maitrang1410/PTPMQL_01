@@ -1,5 +1,10 @@
-namespace MvcMovie.Controllers{
-    public class HelloWorldController: Controller {
+using Microsoft.AspNetCore.Mvc;
+using MvcMovie.Models;
+
+namespace MvcMovie.Controllers;
+
+public class HelloWorldController : Controller
+{
        
 
         public IActionResult Index()
@@ -13,8 +18,3 @@ namespace MvcMovie.Controllers{
             return "This is the Welcome action method...";
         }
     }
-}
-
-        }
-
-        }

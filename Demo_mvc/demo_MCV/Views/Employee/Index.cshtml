@@ -1,0 +1,11 @@
+@model demo_MVC.Models.Employee
+
+<form asp-action="Index" method="post">
+    <label>Mã nhân viên: </label>
+    <input type="text" name="EmployeeId" placeholder="Mã nhân viên"> </br> </br>
+    <label>Tuổi: </label>
+    <input type="text" name="Age" placeholder="Tuổi nhân viên"> </br> </br>
+    <button type="submit">Gửi</button>
+    <h1>@ViewBag.Message</h1>
+    <h3>Mai thị thu trang _2002</h3>
+</form>
