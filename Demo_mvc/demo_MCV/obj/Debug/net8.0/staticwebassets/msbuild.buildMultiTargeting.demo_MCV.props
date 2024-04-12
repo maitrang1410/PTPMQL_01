@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\demo_MCV.props" />
-</Project>

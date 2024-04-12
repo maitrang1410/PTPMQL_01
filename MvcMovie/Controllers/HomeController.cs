@@ -22,6 +22,7 @@ public class HomeController : Controller
     {
         string StrOut="xin chào "+ FullName+ "đến từ "+Address;
         ViewBag.Message=StrOut;
+        return View();
         }
     public IActionResult Privacy()
     {
