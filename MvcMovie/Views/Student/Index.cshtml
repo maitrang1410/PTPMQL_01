@@ -1,4 +1,4 @@
-@model IEnumerable<MvcMovie.Models.Person>
+@model IEnumerable<MvcMovie.Models.Student>
 @{
     ViewData["Title"] = "Index";
 }
@@ -23,8 +23,8 @@
                     @item.FullName
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.PersonId">Edit</a>
-                    <a asp-action="Delete" asp-route-id="@item.PersonId">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.StudentId">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@item.StudentId">Delete</a>
                 </td>
             </tr>
         }

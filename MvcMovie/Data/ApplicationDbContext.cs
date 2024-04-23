@@ -9,8 +9,10 @@ namespace MvcMovie.Data
         {
         }
 
-        public DbSet<Person> People { get; set; } // Sửa từ "Person" thành "People" để phản ánh số nhiều
+        public DbSet<Person> Persons { get; set; } = default!;
+        public DbSet<Employee> Employees { get;set;} = default!;
+        public DbSet<Student> Student { get;set;} = default!;
 
-        // Nếu bạn có nhiều bảng khác, bạn cũng có thể thêm các DbSet khác ở đây
+
     }
 }
