@@ -13,14 +13,20 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.TenHTPP)
+                @Html.DisplayNameFor(model => model.MaHTPP)
             </th>
-            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenHTPP)
+
+            </th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaHTPP)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.TenHTPP)
             </td>
