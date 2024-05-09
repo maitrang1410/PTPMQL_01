@@ -5,26 +5,21 @@
 namespace MvcMovie.Migrations
 {
     /// <inheritdoc />
-    public partial class Create_table_DaiLy : Migration
+    public partial class Create_table_Hethongphanphois : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "DaiLy",
+                name: "Hethongphanphois",
                 columns: table => new
                 {
-                    MaDaiLy = table.Column<string>(type: "TEXT", nullable: false),
-                    TenDaiLy = table.Column<string>(type: "TEXT", nullable: true),
-                    DiaChi = table.Column<string>(type: "TEXT", nullable: true),
-                    NguoiDaiDien = table.Column<string>(type: "TEXT", nullable: true),
-                    DienThoai = table.Column<string>(type: "TEXT", nullable: true),
-                    MaHTPP = table.Column<string>(type: "TEXT", nullable: true),
+                    MaHTPP = table.Column<string>(type: "TEXT", nullable: false),
                     TenHTPP = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_DaiLy", x => x.MaDaiLy);
+                    table.PrimaryKey("PK_Hethongphanphois", x => x.MaHTPP);
                 });
         }
 
@@ -32,7 +27,7 @@ namespace MvcMovie.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "DaiLy");
+                name: "Hethongphanphois");
         }
     }
 }

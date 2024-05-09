@@ -16,32 +16,17 @@ namespace MvcMovie.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.3");
 
-            modelBuilder.Entity("MvcMovie.Models.DaiLy", b =>
+            modelBuilder.Entity("MvcMovie.Models.Hethongphanphoi", b =>
                 {
-                    b.Property<string>("MaDaiLy")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("DiaChi")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("DienThoai")
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("MaHTPP")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("NguoiDaiDien")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("TenDaiLy")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("TenHTPP")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("MaDaiLy");
+                    b.HasKey("MaHTPP");
 
-                    b.ToTable("DaiLy");
+                    b.ToTable("Hethongphanphois", (string)null);
                 });
 
             modelBuilder.Entity("MvcMovie.Models.Person", b =>

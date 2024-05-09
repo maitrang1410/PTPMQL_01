@@ -26,26 +26,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\BT_PTPMQL\MvcMovie
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/BT_PTPMQL/MvcMovie/Views/DaiLy/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFpTHlcQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/BT_PTPMQL/MvcMovie/Views/DaiLy/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFpTHlcRGVsZXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/BT_PTPMQL/MvcMovie/Views/DaiLy/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFpTHlcRGV0YWlscy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/BT_PTPMQL/MvcMovie/Views/DaiLy/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFpTHlcRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/BT_PTPMQL/MvcMovie/Views/DaiLy/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFpTHlcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/BT_PTPMQL/MvcMovie/Views/Employee/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -64,6 +44,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/BT_PTPMQL/MvcMovie/Views/HelloWorld/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVsbG9Xb3JsZFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BT_PTPMQL/MvcMovie/Views/Hethongphanphoi/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGV0aG9uZ3BoYW5waG9pXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BT_PTPMQL/MvcMovie/Views/Hethongphanphoi/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGV0aG9uZ3BoYW5waG9pXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BT_PTPMQL/MvcMovie/Views/Hethongphanphoi/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGV0aG9uZ3BoYW5waG9pXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BT_PTPMQL/MvcMovie/Views/Hethongphanphoi/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGV0aG9uZ3BoYW5waG9pXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/BT_PTPMQL/MvcMovie/Views/Hethongphanphoi/Index.cshtml]

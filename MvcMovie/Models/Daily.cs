@@ -6,7 +6,7 @@ namespace MvcMovie.Models
     [Table("DaiLy")]
     public class DaiLy : Hethongphanphoi
     {
-        [Key]
+       
         public string? MaDaiLy { get; set; }
         public string? TenDaiLy { get; set; }
         public string? DiaChi { get; set; }
