@@ -26,6 +26,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\BT_PTPMQL\MvcMovie
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/BT_PTPMQL/MvcMovie/Views/DaiLy/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFpTHlcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BT_PTPMQL/MvcMovie/Views/DaiLy/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFpTHlcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BT_PTPMQL/MvcMovie/Views/DaiLy/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFpTHlcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BT_PTPMQL/MvcMovie/Views/DaiLy/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFpTHlcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/BT_PTPMQL/MvcMovie/Views/DaiLy/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFpTHlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
