@@ -10,8 +10,8 @@ using MvcMovie.Data;
 namespace MvcMovie.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240509084458_Create_table_DaiLy")]
-    partial class Create_table_DaiLy
+    [Migration("20240510024330_Hethongphanphois")]
+    partial class Hethongphanphois
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -82,6 +82,9 @@ namespace MvcMovie.Migrations
                     b.Property<string>("DienThoai")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("HTPPTempId1")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("MaDaiLy")
                         .HasColumnType("TEXT");
 
@@ -90,6 +93,8 @@ namespace MvcMovie.Migrations
 
                     b.Property<string>("TenDaiLy")
                         .HasColumnType("TEXT");
+
+                    b.HasIndex("HTPPTempId1");
 
                     b.ToTable("DaiLy");
                 });
@@ -111,11 +116,22 @@ namespace MvcMovie.Migrations
 
             modelBuilder.Entity("MvcMovie.Models.DaiLy", b =>
                 {
+                    b.HasOne("MvcMovie.Models.Hethongphanphoi", "HTPP")
+                        .WithMany("DaiLy")
+                        .HasForeignKey("HTPPTempId1");
+
                     b.HasOne("MvcMovie.Models.Hethongphanphoi", null)
                         .WithOne()
                         .HasForeignKey("MvcMovie.Models.DaiLy", "MaHTPP")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("HTPP");
+                });
+
+            modelBuilder.Entity("MvcMovie.Models.Hethongphanphoi", b =>
+                {
+                    b.Navigation("DaiLy");
                 });
 #pragma warning restore 612, 618
         }

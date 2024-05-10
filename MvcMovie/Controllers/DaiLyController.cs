@@ -22,7 +22,9 @@ namespace MvcMovie.Controllers
         // GET: DaiLy
         public async Task<IActionResult> Index()
         {
-            return View(await _context.DaiLy.ToListAsync());
+            
+           var applicationDbContext = await _context.DaiLy.Include(d => d.HTPP).ToListAsync();
+    return View(applicationDbContext);
         }
 
         // GET: DaiLy/Details/5
@@ -34,6 +36,7 @@ namespace MvcMovie.Controllers
             }
 
             var daiLy = await _context.DaiLy
+                .Include(d => d.HTPP)
                 .FirstOrDefaultAsync(m => m.MaHTPP == id);
             if (daiLy == null)
             {
@@ -46,6 +49,7 @@ namespace MvcMovie.Controllers
         // GET: DaiLy/Create
         public IActionResult Create()
         {
+             ViewData["MaHTPP"] = new SelectList(_context.Hethongphanphois, "MaHTPP", "MaHTPP");
             return View();
         }
 
@@ -54,15 +58,18 @@ namespace MvcMovie.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
        [HttpPost]
 [ValidateAntiForgeryToken]
-public async Task<IActionResult> Create([Bind("MaDaiLy,TenDaiLy,DiaChi,NguoiDaiDien,DienThoai,MaHTPP,TenHTPP")] DaiLy daiLy)
+public async Task<IActionResult> Create([Bind("MaDaiLy,TenDaiLy,DiaChi,NguoiDaiDien,DienThoai,MaHTPP,TenHTPP")] DaiLy daiLy1)
 {
+   
     if (ModelState.IsValid)
     {
-        _context.Add(daiLy);
+        _context.Add(daiLy1);
         await _context.SaveChangesAsync();
         return RedirectToAction(nameof(Index));
     }
-    return View(daiLy);
+    ViewBag.MaHTPP = new SelectList(_context.Hethongphanphois, "MaHTPP", "MaHTPP");
+
+    return View(daiLy1);
 }
 
 
@@ -79,6 +86,7 @@ public async Task<IActionResult> Create([Bind("MaDaiLy,TenDaiLy,DiaChi,NguoiDaiD
             {
                 return NotFound();
             }
+            ViewBag.MaHTPP = new SelectList(_context.Hethongphanphois, "MaHTPP", "MaHTPP");
             return View(daiLy);
         }
 
@@ -87,9 +95,9 @@ public async Task<IActionResult> Create([Bind("MaDaiLy,TenDaiLy,DiaChi,NguoiDaiD
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("MaDaiLy,TenDaiLy,DiaChi,NguoiDaiDien,DienThoai,MaHTPP,TenHTPP")] DaiLy daiLy)
+        public async Task<IActionResult> Edit(string id, [Bind("MaDaiLy,TenDaiLy,DiaChi,NguoiDaiDien,DienThoai,MaHTPP,TenHTPP")] DaiLy daiLy1)
         {
-            if (id != daiLy.MaHTPP)
+            if (id != daiLy1.MaHTPP)
             {
                 return NotFound();
             }
@@ -98,12 +106,12 @@ public async Task<IActionResult> Create([Bind("MaDaiLy,TenDaiLy,DiaChi,NguoiDaiD
             {
                 try
                 {
-                    _context.Update(daiLy);
+                    _context.Update(daiLy1);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!DaiLyExists(daiLy.MaHTPP))
+                    if (!DaiLyExists(daiLy1.MaHTPP))
                     {
                         return NotFound();
                     }
@@ -114,7 +122,8 @@ public async Task<IActionResult> Create([Bind("MaDaiLy,TenDaiLy,DiaChi,NguoiDaiD
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(daiLy);
+            ViewBag.MaHTPP = new SelectList(_context.Hethongphanphois, "MaHTPP", "MaHTPP");
+            return View(daiLy1);
         }
 
         // GET: DaiLy/Delete/5
@@ -126,6 +135,7 @@ public async Task<IActionResult> Create([Bind("MaDaiLy,TenDaiLy,DiaChi,NguoiDaiD
             }
 
             var daiLy = await _context.DaiLy
+                .Include(d => d.HTPP)
                 .FirstOrDefaultAsync(m => m.MaHTPP == id);
             if (daiLy == null)
             {

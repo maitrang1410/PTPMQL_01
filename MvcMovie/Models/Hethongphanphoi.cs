@@ -7,6 +7,7 @@ public class Hethongphanphoi
     {
        
         [Key]
-        public string? MaHTPP { get; set; }
+        public string MaHTPP { get; set; }
         public string? TenHTPP { get; set; }
+         public virtual ICollection<DaiLy> DaiLy { get; set; }
     }
