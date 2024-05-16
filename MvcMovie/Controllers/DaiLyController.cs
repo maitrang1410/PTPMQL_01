@@ -49,7 +49,7 @@ namespace MvcMovie.Controllers
         // GET: DaiLy/Create
         public IActionResult Create()
         {
-             ViewData["MaHTPP"] = new SelectList(_context.Hethongphanphois, "MaHTPP", "MaHTPP");
+             ViewBag.MaHTPP = new SelectList(_context.Hethongphanphois, "MaHTPP", "MaHTPP");
             return View();
         }
 
@@ -57,16 +57,15 @@ namespace MvcMovie.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
        [HttpPost]
-[ValidateAntiForgeryToken]
+       [ValidateAntiForgeryToken]
 public async Task<IActionResult> Create([Bind("MaDaiLy,TenDaiLy,DiaChi,NguoiDaiDien,DienThoai,MaHTPP,TenHTPP")] DaiLy daiLy1)
 {
    
-    if (ModelState.IsValid)
-    {
-        _context.Add(daiLy1);
-        await _context.SaveChangesAsync();
-        return RedirectToAction(nameof(Index));
-    }
+    if (ModelState.IsValid){
+                _context.Add(daiLy1);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
     ViewBag.MaHTPP = new SelectList(_context.Hethongphanphois, "MaHTPP", "MaHTPP");
 
     return View(daiLy1);

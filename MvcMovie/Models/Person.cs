@@ -1,16 +1,16 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using Microsoft.EntityFrameworkCore;
 namespace MvcMovie.Models
 {
     [Table("Persons")]
-    public class Person 
+    public class Person
     {
-       
-        //[Required]
-         //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    [Key]
+        [Key]
+        [Required]
+       //  [Index(IsUnique = true)] // Đảm bảo rằng PersonId là duy nhất
         public string? PersonId { get; set; }
+
         public string? FullName { get; set; }
         public string? Address { get; set; }
     }
