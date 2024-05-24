@@ -7,11 +7,13 @@ namespace MvcMovie.Models
     public class Person
     {
         [Key]
-        [Required]
-       //  [Index(IsUnique = true)] // Đảm bảo rằng PersonId là duy nhất
-        public string? PersonId { get; set; }
+       [Required]
+         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+     // [Index(IsUnique = true)] // Đảm bảo rằng PersonId là duy nhất
+        public  string? PersonId { get; set; }
 
         public string? FullName { get; set; }
         public string? Address { get; set; }
+        
     }
 }

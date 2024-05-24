@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 
 using MvcMovie.Models;
-namespace DemoMVC.Data
+namespace MvcMovie.Data
 {
     public class ApplicationDbContext: DbContext 
     {
@@ -14,11 +14,12 @@ namespace DemoMVC.Data
         public DbSet<Employee>Employees {get;set;}
         public DbSet<Hethongphanphoi>Hethongphanphois {get;set;}
          protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Person>()
-                .HasIndex(p => p.PersonId)
-                .IsUnique();
-        }
+{
+    modelBuilder.Entity<Person>()
+        .HasIndex(p => p.PersonId)
+        .IsUnique();
+}
+
         }
         }
         

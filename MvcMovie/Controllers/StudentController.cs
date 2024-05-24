@@ -1,7 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using MvcMovie.Data;
 using MvcMovie.Models;
+using SQLitePCL;
+using System.Diagnostics.SymbolStore;
+using System.Linq.Expressions;
+using MvcMovie.Models.Process;
+using OfficeOpenXml;
 
 namespace MvcMovie.Controllers
 {
@@ -13,6 +19,7 @@ namespace MvcMovie.Controllers
             _context = context;
     
         }
+        private readonly ExcelProcess _excelProcess = new ExcelProcess() ;
         public async Task<IActionResult> Index()
         {
            // return _context.Student !=null ?
@@ -106,6 +113,74 @@ public async Task<IActionResult> Edit(string id, [Bind("StudentId, FullName")]  
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+         [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Upload(IFormFile file)
+        {
+            if (file != null)
+            {
+                string fileExtension = Path.GetExtension(file.FileName);
+                if (fileExtension != ".xls" && fileExtension != ".xlsx")
+                {
+                    ModelState.AddModelError("", "plese upload excel!");
+                }
+                else
+                // rename to sever
+                {
+                    var fileName = DateTime.Now.ToShortTimeString() + fileExtension;
+                    var filePath = Path.Combine(Directory.GetCurrentDirectory() + "/Upload/Excels", fileName);
+                    var fileLocation = new FileInfo(filePath).ToString();
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        //save file to sever
+                        await file.CopyToAsync(stream);
+                        //read data from excel to file from dt
+                        var  dt = _excelProcess.ExcelToDataTable(fileLocation);
+                        //using for loop  to read date from dt
+                        for (int i = 0; i < dt.Rows.Count; i++)
+                        {
+                       string StudentId = dt.Rows[i][0].ToString();
+                           if (!await _context.Student.AnyAsync(p => p.StudentId == StudentId))
+                              {
+                                var st = new Student
+                                  {
+                              StudentId = dt.Rows[i][0].ToString(), // Gán giá trị cho thuộc tính StudentId
+                                 FullName = dt.Rows[i][1].ToString()
+            
+                                 };
+                               _context.Add(st);
+                                 }
+                                    else
+                                     {
+                                     // Xử lý trường hợp PersonId đã tồn tại, ví dụ như bỏ qua bản ghi hoặc thông báo lỗi
+                                 }
+}
+                        await _context.SaveChangesAsync();
+                        return RedirectToAction(nameof(Index));
+
+                    }
+                }
+            }
+            return View();
+
+        }
+       
+       public IActionResult Download()
+        {
+            var fileName = "StudentList.xlsx";
+            using(ExcelPackage excelPackage = new ExcelPackage())
+            {
+                ExcelWorksheet Worksheet = excelPackage.Workbook.Worksheets.Add("Sheet 1");
+                Worksheet.Cells["A1"].Value = "StudentId";
+                Worksheet.Cells["B1"].Value = "FullName";
+                //excelWorksheet.Cells["C1"].Value = "Address";
+                var studentList = _context.Student.ToList();
+                Worksheet.Cells["A2"].LoadFromCollection(studentList);
+                var stream = new MemoryStream(excelPackage.GetAsByteArray());
+                return File(stream,"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",fileName);
+            }
+        }
+
 private bool StudentExists(string id)
 {
     return (_context.Student?.Any ( e => e.StudentId == id ) ).GetValueOrDefault();
