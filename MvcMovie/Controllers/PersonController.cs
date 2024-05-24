@@ -1,3 +1,4 @@
+using System.Reflection.Emit;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
@@ -8,7 +9,8 @@ using System.Diagnostics.SymbolStore;
 using System.Linq.Expressions;
 using MvcMovie.Models.Process;
 using OfficeOpenXml;
-
+using X.PagedList;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace MvcMovie.Controllers
 {
@@ -21,11 +23,25 @@ namespace MvcMovie.Controllers
     {
             _context = context;
         }
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? page, int? PageSize)
         {
-            var model = await _context.Persons.ToListAsync();
+            ViewBag.PageSize = new List<SelectListItem>()
+            {
+            new SelectListItem(){ Value="3", Text ="3"},
+            new SelectListItem(){ Value="5", Text="5"},
+            new SelectListItem(){ Value="10", Text="10"},
+            new SelectListItem(){ Value="15", Text="15"},
+            new SelectListItem(){ Value="25", Text="25"},
+            new SelectListItem(){ Value="50", Text="50"},
+            };
+             int currentPageSize = (PageSize ?? 3);
+           ViewBag.psize = currentPageSize;
+
+            var model = _context.Persons.ToList().ToPagedList(page ?? 1, currentPageSize );
             return View(model);
         }
+
+        
         public IActionResult Create()
         {
             return View();
@@ -213,7 +229,8 @@ namespace MvcMovie.Controllers
             return (_context.Persons?.Any(e => e.PersonId == id)).GetValueOrDefault();
         }    
         }
-        }  
+}
+         
         
         
     
